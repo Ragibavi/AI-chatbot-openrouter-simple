@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot Sederhana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen flex items-center justify-center px-4">
+    <div class="w-full max-w-4xl p-6 bg-gray-800 rounded-xl shadow-lg">
+      <h1 class="text-2xl font-semibold mb-4 text-center">💬 Chatbot AI</h1>
+
+      <form method="POST" action="/ask" class="flex space-x-2 mb-6">
+        <input
+          type="text"
+          name="prompt"
+          placeholder="Tanyakan sesuatu..."
+          class="flex-grow px-4 py-2 rounded-md text-black focus:outline-none"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md"
+        >
+          Kirim
+        </button>
+      </form>
+
+      <% if (chatHistory && chatHistory.length > 0) { %>
+        <% chatHistory.forEach(chat => { %>
+          <div class="mb-4">
+            <p class="mb-1 font-medium">🧑 Kamu:</p>
+            <div class="bg-gray-700 p-3 rounded-lg"><%= chat.prompt %></div>
+          </div>
+          <div class="mb-4">
+            <p class="mb-1 font-medium">🤖 AI:</p>
+            <div class="bg-green-700 p-3 rounded-lg whitespace-pre-wrap"><%= chat.response %></div>
+          </div>
+        <% }) %>
+      <% } %>
+    </div>
+  </body>
+</html>
