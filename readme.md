@@ -5,7 +5,6 @@
 ```bash
 git clone https://github.com/Ragibavi/AI-chatbot-openrouter-simple.git
 cd AI-chatbot-openrouter-simple
-"OPENROUTER_API_KEY="
 ```
 
 2. **Instalasi dependensi:**
