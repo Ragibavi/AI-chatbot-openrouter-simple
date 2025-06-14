@@ -16,7 +16,7 @@ npm install
 3. **Jalankan aplikasi:**
 
 ```bash
-node app.js
+npm run dev
 ```
 
 4. **Buka di browser:**
