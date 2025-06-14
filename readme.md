@@ -13,13 +13,15 @@ cd AI-chatbot-openrouter-simple
 npm install
 ```
 
-3. **Jalankan aplikasi:**
+3. **Hapus ________ Pada .ENV OPENROUTER_API_KEY=:**
+
+4. **Jalankan aplikasi:**
 
 ```bash
 npm run dev
 ```
 
-4. **Buka di browser:**
+5. **Buka di browser:**
 
 ```
 http://localhost:3000
